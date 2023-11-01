@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  // Typescriptの解析を有効にする。
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next", 
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "root": true
 }
