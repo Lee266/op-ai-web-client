@@ -1,5 +1,3 @@
-
-
 module.exports = (config) => {
   // Add your custom Dev Middleware configuration here
   config.watchOptions = {
