@@ -39,5 +39,5 @@
   "repository": "https://github.com/Lee266/op-ai-web-client.git",
   "author": "Lee <lee20010905@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.2"
 }
