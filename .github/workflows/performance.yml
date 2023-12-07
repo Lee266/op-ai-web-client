@@ -5,7 +5,8 @@ jobs:
   lighthouseci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Setup Node.js and Yarn
         uses: actions/setup-node@v3
@@ -18,16 +19,16 @@ jobs:
       - name: Active Corepack
         run: corepack enable
 
+      - run: yarn set version stable
+
       - name: Install Dependencies
-        run: |
-          yarn set version stable
-          yarn install --immutable --immutable-cache
-        # yarn add @lhci/cli@0.12.x
+        run: yarn install --immutable --immutable-cache
+      # yarn add @lhci/cli@0.12.x
 
       - name: Build Application
         run: yarn build
 
       - name: Run Lighthouse CI
-        run: lhci autorun
+        run: yarn lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
