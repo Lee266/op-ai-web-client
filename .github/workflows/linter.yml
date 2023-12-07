@@ -21,6 +21,13 @@ jobs:
       with:
         node-version: 18
 
+    - name: Install Corepack
+      run: npm install -g corepack
+
+    - run: corepack enable
+
+    - run: yarn set version stable
+
     - name: Install Dependencies
       run: yarn install --frozen-lockfile
 
