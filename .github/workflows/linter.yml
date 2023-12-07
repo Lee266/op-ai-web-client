@@ -24,12 +24,13 @@ jobs:
     - name: Install Corepack
       run: npm install -g corepack
 
-    - run: corepack enable
+    - name: Active Corepack
+      run: corepack enable
 
     - run: yarn set version stable
 
     - name: Install Dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
 
     - name: Run ESLint
       run: yarn lint

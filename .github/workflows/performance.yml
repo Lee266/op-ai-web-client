@@ -13,9 +13,8 @@ jobs:
           node-version: 16
 
       - name: Install Dependencies
-        run: |
-          yarn install --frozen-lockfile
-          yarn add @lhci/cli@0.12.x
+        run: yarn install --immutable --immutable-cache
+        # yarn add @lhci/cli@0.12.x
 
       - name: Build Application
         run: yarn build
