@@ -12,8 +12,16 @@ jobs:
         with:
           node-version: 16
 
+      - name: Install Corepack
+        run: npm install -g corepack
+
+      - name: Active Corepack
+        run: corepack enable
+
       - name: Install Dependencies
-        run: yarn install --immutable --immutable-cache
+        run: |
+          yarn set version stable
+          yarn install --immutable --immutable-cache
         # yarn add @lhci/cli@0.12.x
 
       - name: Build Application

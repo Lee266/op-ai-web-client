@@ -1,7 +1,6 @@
 name: lint-check
 
 on:
-  push:
   pull_request:
     branches:
       - main
@@ -27,10 +26,10 @@ jobs:
     - name: Active Corepack
       run: corepack enable
 
-    - run: yarn set version stable
-
     - name: Install Dependencies
-      run: yarn install
+      run: |
+        yarn set version stable
+        yarn install --immutable --immutable-cache
 
     - name: Run ESLint
       run: yarn lint
