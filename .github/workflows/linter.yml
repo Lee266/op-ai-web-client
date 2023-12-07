@@ -1,0 +1,34 @@
+name: lint-check
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  eslint:
+    name: runner / eslint
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js and Yarn
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install Dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Run ESLint
+      run: yarn lint
+
+    - name: Reviewdog
+      uses: reviewdog/action-eslint@v1
+      with:
+        reporter: github-check
+        eslint_flags: "src/"
