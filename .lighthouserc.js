@@ -16,6 +16,7 @@ module.exports = {
         'render-blocking-resources': 'off',
         'Reduce unused JavaScript': 'off',
         'unused-javascript': 'off',
+        'service-worker': 'off',
       },
     },
     upload: {
