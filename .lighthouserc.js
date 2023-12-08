@@ -1,7 +1,10 @@
 module.exports = {
   ci: {
     collect: {
-      // collect options here
+      startServerCommand: 'yarn start',
+      startServerReadyPattern: 'ready on',
+      url: ['http://localhost:3000'],
+      numberOfRuns: 3, //　lighthouseの試行回数
     },
     assert: {
       // assert options here
