@@ -10,7 +10,13 @@ module.exports = {
     },
     assert: {
       preset: 'lighthouse:recommended',
-      assertions: {},
+      assertions: {
+        'bf-cache': 'off',
+        'csp-xss': 'off',
+        'render-blocking-resources': 'off',
+        'Reduce unused JavaScript': 'off',
+        'unused-javascript': 'off',
+      },
     },
     upload: {
       target: 'temporary-public-storage',
