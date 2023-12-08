@@ -7,7 +7,9 @@ module.exports = {
       numberOfRuns: 3, //　lighthouseの試行回数
     },
     assert: {
-      // assert options here
+      assertions: {
+        preset: 'lighthouse:recommended',
+      },
     },
     upload: {
       target: 'temporary-public-storage',
