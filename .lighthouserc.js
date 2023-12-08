@@ -1,3 +1,5 @@
+// https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/configuration.md
+
 module.exports = {
   ci: {
     collect: {
@@ -7,9 +9,8 @@ module.exports = {
       numberOfRuns: 3, //　lighthouseの試行回数
     },
     assert: {
-      assertions: {
-        preset: 'lighthouse:recommended',
-      },
+      preset: 'lighthouse:recommended',
+      assertions: {},
     },
     upload: {
       target: 'temporary-public-storage',
