@@ -1,7 +1,6 @@
 name: lint-check
 
 on:
-  push:
   pull_request:
     branches:
       - main
@@ -45,6 +44,7 @@ jobs:
     - name: Slack Notification on Failure
       id: slack
       uses: slackapi/slack-github-action@v1.24.0
+      if: ${{ failure() }}
       with:
         payload: |
           {
