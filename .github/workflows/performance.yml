@@ -38,20 +38,19 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      - name: Send GitHub Action trigger data to Slack workflow
+      - name: Slack Notification on Failure
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         if: ${{ failure() }}
         with:
           payload: |
             {
-              "text": "デプロイ失敗しました😢\n result:${{ job.status }}\n performance Test Action: ${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "デプロイ失敗しました😢\n result:${{ job.status }}\n performance Test Action: ${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+                    "text": "デプロイ失敗しました😢\n result: ${{ job.status }}\n lint-check Action: ${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
                   }
                 }
               ]
