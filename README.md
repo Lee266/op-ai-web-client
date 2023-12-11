@@ -17,4 +17,4 @@ docker buildを実行下のち、[http://localhost:3000](http://localhost:3000)�
 - Next.js v14~
 - React v18~
 - TypeScript v5~
-- yarn
+- yarn v4~
