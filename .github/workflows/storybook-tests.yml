@@ -1,8 +1,8 @@
-name: 'Storybook Tests'
+name: Storybook Tests
 on: push
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
