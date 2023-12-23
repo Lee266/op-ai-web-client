@@ -2,13 +2,13 @@
 
 import { CssBaseline } from '@mui/material';
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
-import theme from '@/app/theme';
+import { lightTheme } from '@/app/theme';
 
 export default function MUIThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <>
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={lightTheme}>
           <CssBaseline />
           {children}
         </ThemeProvider>
