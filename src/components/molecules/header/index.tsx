@@ -9,7 +9,7 @@ import UserAccountButton from '../userAccountButton';
 export const Header = () => {
   return (
     <Box sx={{ display: 'flex' }}>
-      <AppBar>
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton size="large" edge="start" color="inherit" aria-label="toggle-navigation-menu">
             <MenuIcon />

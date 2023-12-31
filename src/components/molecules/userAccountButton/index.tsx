@@ -1,3 +1,5 @@
+'use client';
+
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
