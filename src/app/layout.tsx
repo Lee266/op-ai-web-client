@@ -3,7 +3,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import MUIThemeProvider from './components/providers/ThemeProvider';
+import MUIThemeProvider from '@/components/providers/ThemeProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
