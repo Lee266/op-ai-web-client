@@ -48,10 +48,18 @@ export default function NumberEstimateCard({
         )}
       </CardContent>
       <CardActions>
-        <Button onClick={onClear}>Clear</Button>
-        <Button onClick={onUndo}>Undo</Button>
-        <Button onClick={onRedo}>Redo</Button>
-        <Button onClick={onEstimateImage}>判定する</Button>
+        <Button onClick={onClear} variant="contained" color="secondary">
+          Clear
+        </Button>
+        <Button onClick={onUndo} variant="contained" color="secondary">
+          Undo
+        </Button>
+        <Button onClick={onRedo} variant="contained" color="secondary">
+          Redo
+        </Button>
+        <Button onClick={onEstimateImage} variant="contained" color="secondary">
+          判定する
+        </Button>
       </CardActions>
     </Card>
   );

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import NumberEstimateCard from '.';
 
 const meta = {
-  title: 'organism/DeviceDetail',
+  title: 'organism/NumberEstimateCard',
   component: NumberEstimateCard,
   parameters: {
     layout: 'centered',
