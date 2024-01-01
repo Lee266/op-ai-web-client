@@ -1,6 +1,10 @@
 {
   // Typescriptの解析を有効にする。
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
   "env": {
     "browser": true,
     "es6": true,
