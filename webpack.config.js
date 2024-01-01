@@ -5,5 +5,9 @@ module.exports = (config) => {
     aggregateTimeout: 300,
     ignored: ['node_modules'],
   };
+
+  config.externals.push({
+    canvas: 'commonjs canvas',
+  });
   return config;
 };
