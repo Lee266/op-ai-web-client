@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: '#fff',
     display: 'standalone',
     scope: '/',
-    start_url: '/',
+    start_url: '/ai',
     name: 'AI lab',
     short_name: 'Lab',
     description: 'AIの開発に関するアプリケーションです。',
