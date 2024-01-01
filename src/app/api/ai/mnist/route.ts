@@ -23,7 +23,6 @@ export async function POST(req: NextRequest) {
       return { data: response.data, status: response.status };
     })
     .catch((e) => {
-      console.error(new Date(), req.method, e.response.status, url);
       return { data: e.response.data, status: e.response.status };
     });
 

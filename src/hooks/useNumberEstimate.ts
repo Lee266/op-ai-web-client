@@ -16,7 +16,6 @@ export function useNumberEstimate() {
         return res.json();
       })
       .catch((e) => {
-        console.error('Error sending request:', e);
         return { error: e.message };
       });
   }

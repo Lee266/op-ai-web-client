@@ -44,21 +44,7 @@ export default function NumberEstimateContainer({ canvasId }: NumberEstimateCont
       // const blob = new Blob([Buffer.from(base64Data, 'base64')], { type: 'image/jpeg' });
 
       // 判定関数に画像を送信
-      numberEstimateTrigger(
-        { image: blob, model: model },
-        {
-          onSuccess(data) {
-            if (data.status >= 200 && data.status < 300) {
-              console.log('ok');
-            } else {
-              console.log(data);
-            }
-          },
-          onError(err) {
-            console.log(err);
-          },
-        },
-      );
+      numberEstimateTrigger({ image: blob, model: model });
     }
   };
 
