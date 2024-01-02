@@ -24,7 +24,7 @@ Next.jsを使用したフロントエンドのプロジェクトです。
 始めるには、次のURLからプロジェクトレポジトリからクローンしプロジェクトレポジトリのREADMEに従ってください.  
 [プロジェクトリポジトリ](https://github.com/Lee266/op-ai-monorepo)
 
-docker buildを実行下のち、[http://localhost:3000]を開いてください。
+上記が成功した場合、<http://localhost:3000>を開いてください。
 
 ## 使用されている主なパッケージ
 
